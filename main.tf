@@ -12,7 +12,7 @@ terraform {
 provider "digitalocean" {
   #https://cloud.digitalocean.com/account/api/tokens
   token = var.do_token
-  #"dop_v1_4a99b50bbe2df570243add9fe19f873fb44f5ccb4b193cb8a7f8ffadcb013842" 
+ 
 }
 
 # iniciando a declaracao da infraestrutura
@@ -37,8 +37,8 @@ variable "do_token" {}
 variable "k8s_name" {}
 variable "region" {}
 
-#output "kube_config" {
-	#value = digitalocean_kubernetes_cluster.foo.kube_config.0.raw_config
+#output "kube_endpoint" {
+#	value = digitalocean_kubernetes_cluster.foo.endpoint
 #}
 
 resource "local_file" "kube_config" {
